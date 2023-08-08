@@ -23,7 +23,13 @@
       <div v-else class="counter-wrapper">
         <div class="d-flex flex-column">
           <div class="counter-title text-uppercase" :class="`text-${counterColour}`">
-            <span class="text-bold text-48">{{ counterTitle }}</span>
+            <div class="text-bold text-48">{{ counterTitle }}</div>
+            <div
+              v-if="counterTitle === counterTitles.exercise"
+              class="text-32 text-secondary"
+            >
+              {{ exercises[currentExercise] }}
+            </div>
           </div>
 
           <div class="counter flex-grow-1">
@@ -67,12 +73,15 @@ export default Vue.extend({
         'Dumbbell Lunge and Rotation',
         'Dumbbell Push Press',
       ],
+      currentExercise: 0,
       exerciseDuration: 60,
-      restDuration: 60,
+      restDuration: 120,
       rounds: 3,
       restBetweenRounds: 180,
       counter: 0,
+      counterColours,
       counterColour: counterColours.exercise,
+      counterTitles,
       counterTitle: counterTitles.exercise,
     }
   },
@@ -84,6 +93,8 @@ export default Vue.extend({
       for (let round = 1; round <= this.rounds; round += 1) {
         // Exercises
         for (let exercise = 0; exercise < this.exercises.length; exercise += 1) {
+          this.currentExercise = exercise
+
           // Exercise
           this.counter = this.exerciseDuration
           this.counterColour = counterColours.exercise
