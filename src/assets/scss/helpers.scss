@@ -142,7 +142,7 @@ $widths: (25, 50, 75, 100);
 
 @each $width in $widths {
   .w-#{$width} {
-    width: #{$width}'%' !important;
+    width: #{$width}#{'%'} !important;
   }
 }
 
@@ -151,7 +151,7 @@ $heights: (25, 50, 75, 100);
 
 @each $height in $heights {
   .h-#{$height} {
-    height: #{$height}'%' !important;
+    height: #{$height}#{'%'} !important;
   }
 }
 
@@ -173,7 +173,6 @@ $heights: (25, 50, 75, 100);
 }
 
 // Display
-
 .d-block {
   display: block !important;
 }
@@ -232,7 +231,6 @@ $align-content: (flex-start, flex-end, center, space-between, space-around, stre
 }
 
 // Flex items
-
 $flex-grow: (0, 1);
 
 @each $flex-grow in $flex-grow {
