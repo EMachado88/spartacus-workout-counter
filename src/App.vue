@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <h1 class="text-primary">Welcome to the Spartacus Workout Counter</h1>
+  <div id="app" class="pa-18">
+    <h1 class="text-white">Welcome to the <span class="text-primary">Spartacus Workout</span> <span
+        class="text-secondary">Counter</span></h1>
   </div>
 </template>
 
@@ -19,14 +20,10 @@ export default Vue.extend({
 @import './assets/scss/main';
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   display: flex;
   color: $white;
   width: 100%;
   height: 100%;
-  padding: 20px;
 }
 </style>

@@ -84,7 +84,7 @@ $font-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64);
 }
 
 // Spacing
-$spaceamounts: (4, 8, 12, 16, 20, 24, 28, 32, 36, 40);
+$spaceamounts: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40);
 $sides: (top, bottom, left, right, x, y);
 
 @each $space in $spaceamounts {
@@ -100,6 +100,10 @@ $sides: (top, bottom, left, right, x, y);
 
   .pa-#{$space} {
     padding: #{$space}px !important;
+  }
+
+  .ma-#{$space} {
+    margin: #{$space}px !important;
   }
 }
 
