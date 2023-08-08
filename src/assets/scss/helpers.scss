@@ -63,7 +63,7 @@
 }
 
 // Text sizes
-$font-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96);
+$font-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96, 192);
 
 @each $font-size in $font-sizes {
   .text-#{$font-size} {
