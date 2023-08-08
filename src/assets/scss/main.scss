@@ -20,3 +20,35 @@ html, body {
   background: $white;
   color: $black;
 }
+
+// Buttons
+.btn {
+  padding: 1rem 2rem;
+  border-width: 2px;
+  border-radius: $border-radius;
+  border-style: solid;
+  cursor: pointer;
+  transition: $transition;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-primary {
+  border-color: $primary;
+  color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $secondary;
+  }
+}
+
+.btn-secondary {
+  border-color: $secondary;
+  color: $secondary;
+
+  &:hover {
+    background-color: $secondary;
+    color: $primary;
+  }
+}
