@@ -21,6 +21,17 @@ html, body {
   color: $black;
 }
 
+// Links
+a {
+  color: $secondary;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
 // Buttons
 .btn {
   padding: 1rem 2rem;
