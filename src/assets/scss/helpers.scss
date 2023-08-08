@@ -32,6 +32,36 @@
   text-align: right !important;
 }
 
+// Text weights
+.text-bold {
+  font-weight: bold !important;
+}
+
+.text-normal {
+  font-weight: normal !important;
+}
+
+.text-light {
+  font-weight: lighter !important;
+}
+
+// Text styles
+.text-italic {
+  font-style: italic !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
 // Text sizes
 $font-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64);
 
