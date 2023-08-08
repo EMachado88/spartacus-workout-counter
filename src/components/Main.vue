@@ -2,13 +2,14 @@
   <main class="flex-grow-1 d-flex flex-column justify-center align-center">
     <div class="text-center">
       <div v-if="!workoutStarted">
-        <div
-          class="start-button btn btn-primary"
-          @click="startWorkout"
-          @keypress="startWorkout"
+        <a
+          href="https://www.menshealth.com/fitness/a20695613/the-spartacus-workout/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instructions-button d-block btn btn-secondary mt-20"
         >
-          Start
-        </div>
+          View the workout
+        </a>
 
         <div class="settings d-flex mt-40 mb-40 justify-center">
           <label
@@ -17,10 +18,10 @@
           >
             <span class="text-tertiary mb-4 text-18">Rounds</span>
             <input
+              v-model="rounds"
               id="rounds"
               class="text-18 w-33"
               type="number"
-              :value="rounds"
               min="0"
             />
           </label>
@@ -31,10 +32,10 @@
           >
             <span class="text-tertiary mb-4 text-18">Rest (exercises)</span>
             <input
+              v-model="restDuration"
               id="rest"
               class="text-18 w-33"
               type="number"
-              :value="restDuration"
               min="0"
             />
           </label>
@@ -45,23 +46,22 @@
           >
             <span class="text-tertiary mb-4 text-18">Rest (rounds)</span>
             <input
+              v-model="restBetweenRounds"
               id="restRounds"
               class="text-18 w-33"
               type="number"
-              :value="restBetweenRounds"
               min="0"
             />
           </label>
         </div>
 
-        <a
-          href="https://www.menshealth.com/fitness/a20695613/the-spartacus-workout/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="instructions-button d-block btn btn-secondary mt-20"
+        <div
+          class="start-button btn btn-primary"
+          @click="startWorkout"
+          @keypress="startWorkout"
         >
-          View the workout
-        </a>
+          Start
+        </div>
       </div>
 
       <div v-else class="counter-wrapper">
@@ -78,6 +78,10 @@
 
           <div class="counter flex-grow-1">
             <span class="text-192" :class="`text-${counterColour}`">{{ counter }}</span>
+          </div>
+
+          <div class="btn btn-primary" @click="stopWorkout" @keypress="stopWorkout">
+            Stop
           </div>
         </div>
       </div>
@@ -97,7 +101,7 @@ const counterColours = {
 const counterTitles = {
   exercise: 'Exercise',
   rest: 'Rest',
-  restRound: 'Rest and hydrate',
+  restRound: 'Get ready for round',
 }
 
 export default Vue.extend({
@@ -124,16 +128,26 @@ export default Vue.extend({
       restBetweenRounds: 180,
       counter: 0,
       counterColours,
-      counterColour: counterColours.exercise,
+      counterColour: counterColours.restRound,
       counterTitles,
-      counterTitle: counterTitles.exercise,
+      counterTitle: counterTitles.restRound,
+      timeouts: [] as number[],
     }
   },
   methods: {
     async startWorkout(): Promise<void> {
       this.workoutStarted = true
 
-      await this.sleep(3000)
+      const introDuration = 10
+
+      // Get ready
+      this.counter = introDuration
+      this.counterColour = counterColours.restRound
+
+      for (let intro = 0; intro <= introDuration; intro += 1) {
+        await this.sleep(1000)
+        this.counter -= 1
+      }
 
       // Rounds
       for (let round = 1; round <= this.rounds; round += 1) {
@@ -173,8 +187,12 @@ export default Vue.extend({
         }
       }
     },
+    stopWorkout(): void {
+      this.workoutStarted = false
+      this.timeouts.forEach((timeout) => clearTimeout(timeout))
+    },
     async sleep(ms: number) {
-      return new Promise((resolve) => setTimeout(resolve, ms))
+      return new Promise((resolve) => this.timeouts.push(setTimeout(resolve, ms)))
     },
   },
 })
