@@ -1,3 +1,81 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00251 14.9297L0 1.07422H6.14651L8.00251 4.27503L9.84583 1.07422H16L8.00251 14.9297Z" fill="black"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866667 33.866662"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="spartacus-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="5.6088103"
+     inkscape:cx="52.952406"
+     inkscape:cy="53.933006"
+     inkscape:window-width="1920"
+     inkscape:window-height="964"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.951647,-55.418028)">
+    <g
+       id="g3"
+       transform="translate(-15.586598,-12.959821)">
+      <text
+         xml:space="preserve"
+         style="font-size:22.5778px;line-height:0;fill:#f20544;fill-opacity:1;fill-rule:evenodd;stroke:#f20544;stroke-width:0.264583;stroke-opacity:1"
+         x="40.035549"
+         y="87.104561"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;line-height:0;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display Bold';fill:#f20544;fill-opacity:1;stroke:#f20544;stroke-width:0.264583;stroke-opacity:1"
+           x="40.035549"
+           y="87.104561">S</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5778px;line-height:0;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display Bold';fill:#f20544;fill-opacity:1;fill-rule:evenodd;stroke:#f20544;stroke-width:0.264583;stroke-opacity:1"
+         x="40.467178"
+         y="99.954628"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           style="fill:#f20544;fill-opacity:1;stroke:#f20544;stroke-width:0.264583;stroke-opacity:1"
+           x="40.467178"
+           y="99.954628">W</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.3199px;line-height:0;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display Bold';fill:#31bdba;fill-opacity:1;fill-rule:evenodd;stroke:#31bdba;stroke-width:0.144374;stroke-opacity:1"
+         x="52.665657"
+         y="82.657562"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           style="fill:#31bdba;fill-opacity:1;stroke:#31bdba;stroke-width:0.144374;stroke-opacity:1"
+           x="52.665657"
+           y="82.657562">C</tspan></text>
+    </g>
+  </g>
 </svg>
