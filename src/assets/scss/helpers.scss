@@ -1,0 +1,216 @@
+// Text colors
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.text-tertiary {
+  color: $tertiary !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-black {
+  color: $black !important;
+}
+
+// Text positions
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+// Text sizes
+$font-sizes: (12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64);
+
+@each $font-size in $font-sizes {
+  .text-#{$font-size} {
+    font-size: #{$font-size}px !important;
+  }
+}
+
+// Background colors
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-tertiary {
+  background-color: $tertiary !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+// Border colors
+.border-primary {
+  border-color: $primary !important;
+}
+
+.border-secondary {
+  border-color: $secondary !important;
+}
+
+.border-tertiary {
+  border-color: $tertiary !important;
+}
+
+.border-white {
+  border-color: $white !important;
+}
+
+.border-black {
+  border-color: $black !important;
+}
+
+// Spacing
+$spaceamounts: (4, 8, 12, 16, 20, 24, 28, 32, 36, 40);
+$sides: (top, bottom, left, right, x, y);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+
+  .pa-#{$space} {
+    padding: #{$space}px !important;
+  }
+}
+
+// Widths
+$widths: (25, 50, 75, 100);
+
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width}'%' !important;
+  }
+}
+
+// Heights
+$heights: (25, 50, 75, 100);
+
+@each $height in $heights {
+  .h-#{$height} {
+    height: #{$height}'%' !important;
+  }
+}
+
+// Positions
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-static {
+  position: static !important;
+}
+
+// Display
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+// Flex
+$flex-directions: (row, column, row-reverse, column-reverse);
+$flex-wrap: (wrap, nowrap, wrap-reverse);
+$justify-content: (flex-start, flex-end, center, space-between, space-around);
+$align-items: (flex-start, flex-end, center, baseline, stretch);
+$align-content: (flex-start, flex-end, center, space-between, space-around, stretch);
+
+@each $flex-direction in $flex-directions {
+  .flex-#{$flex-direction} {
+    flex-direction: #{$flex-direction} !important;
+  }
+}
+
+@each $flex-wrap in $flex-wrap {
+  .flex-#{$flex-wrap} {
+    flex-wrap: #{$flex-wrap} !important;
+  }
+}
+
+@each $justify-content in $justify-content {
+  .justify-#{$justify-content} {
+    justify-content: #{$justify-content} !important;
+  }
+}
+
+@each $align-items in $align-items {
+  .align-items-#{$align-items} {
+    align-items: #{$align-items} !important;
+  }
+}
+
+@each $align-content in $align-content {
+  .align-content-#{$align-content} {
+    align-content: #{$align-content} !important;
+  }
+}
+
+// Flex items
+
+$flex-grow: (0, 1);
+
+@each $flex-grow in $flex-grow {
+  .flex-grow-#{$flex-grow} {
+    flex-grow: #{$flex-grow} !important;
+  }
+}
+
+$flex-shrink: (0, 1);
+
+@each $flex-shrink in $flex-shrink {
+  .flex-shrink-#{$flex-shrink} {
+    flex-shrink: #{$flex-shrink} !important;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Welcome to the Spartacus Workout Counter</h1>
+    <h1 class="text-primary">Welcome to the Spartacus Workout Counter</h1>
   </div>
 </template>
 
