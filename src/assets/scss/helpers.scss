@@ -138,7 +138,7 @@ $sides: (top, bottom, left, right, x, y);
 }
 
 // Widths
-$widths: (25, 50, 75, 100);
+$widths: (25, 33, 50, 75, 100);
 
 @each $width in $widths {
   .w-#{$width} {

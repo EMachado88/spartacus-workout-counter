@@ -63,3 +63,29 @@ a {
     color: $primary;
   }
 }
+
+// Inputs
+input {
+  all: unset;
+}
+
+input[type='text'], input[type='email'], input[type='password'], input[type='number'], input[type='tel'], input[type='url'], textarea {
+  width: auto;
+  padding: 1rem 2rem;
+  border-width: 2px;
+  border-radius: $border-radius;
+  border: 2px solid $tertiary;
+  transition: $transition;
+  text-transform: uppercase;
+  text-align: center;
+  color: $tertiary;
+  background-color: transparent;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:focus {
+    outline: none;
+  }
+}

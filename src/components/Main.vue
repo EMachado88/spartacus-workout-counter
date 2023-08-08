@@ -10,6 +10,50 @@
           Start
         </div>
 
+        <div class="settings d-flex mt-40 mb-40 justify-center">
+          <label
+            for="rounds"
+            class="d-flex flex-column align-items-center justify-space-between"
+          >
+            <span class="text-tertiary mb-4 text-18">Rounds</span>
+            <input
+              id="rounds"
+              class="text-18 w-33"
+              type="number"
+              :value="rounds"
+              min="0"
+            />
+          </label>
+
+          <label
+            for="rest"
+            class="d-flex flex-column align-items-center justify-space-between"
+          >
+            <span class="text-tertiary mb-4 text-18">Rest (exercises)</span>
+            <input
+              id="rest"
+              class="text-18 w-33"
+              type="number"
+              :value="restDuration"
+              min="0"
+            />
+          </label>
+
+          <label
+            for="restRounds"
+            class="d-flex flex-column align-items-center justify-space-between"
+          >
+            <span class="text-tertiary mb-4 text-18">Rest (rounds)</span>
+            <input
+              id="restRounds"
+              class="text-18 w-33"
+              type="number"
+              :value="restBetweenRounds"
+              min="0"
+            />
+          </label>
+        </div>
+
         <a
           href="https://www.menshealth.com/fitness/a20695613/the-spartacus-workout/"
           target="_blank"
@@ -88,6 +132,8 @@ export default Vue.extend({
   methods: {
     async startWorkout(): Promise<void> {
       this.workoutStarted = true
+
+      await this.sleep(3000)
 
       // Rounds
       for (let round = 1; round <= this.rounds; round += 1) {
