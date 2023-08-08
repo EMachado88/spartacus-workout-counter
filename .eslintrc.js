@@ -15,6 +15,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     semi: 0,
+    'no-promise-executor-return': 'off',
+    'no-await-in-loop': 'off',
   },
   overrides: [
     {
