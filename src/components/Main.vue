@@ -10,7 +10,7 @@
     </span>
 
     <div v-else>
-      <h1>Workout started!</h1>
+      <h3 class="text-96">{{ counter }}</h3>
     </div>
   </div>
 </template>
@@ -23,11 +23,23 @@ export default Vue.extend({
   data() {
     return {
       workoutStarted: false,
+      exerciseDuration: 60,
+      restDuration: 60,
+      rounds: 3,
+      restBetweenRounds: 180,
+      counter: 0,
     }
   },
   methods: {
     startWorkout() {
       this.workoutStarted = true
+      this.counter = this.exerciseDuration
+
+      for (let i = 1; i <= this.exerciseDuration; i += 1) {
+        setTimeout(() => {
+          this.counter -= 1
+        }, i * 1000)
+      }
     },
   },
 })
