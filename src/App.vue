@@ -1,11 +1,7 @@
 <template>
   <div id="app" class="d-flex pa-20 flex-column">
     <Header />
-
-    <main class="flex-grow-1 d-flex flex-column justify-center align-center">
-      <Main />
-    </main>
-
+    <Main />
     <Footer />
   </div>
 </template>

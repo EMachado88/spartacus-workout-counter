@@ -1,18 +1,20 @@
 <template>
-  <div class="text-center">
-    <span
-      class="start-button btn btn-primary"
-      @click="startWorkout"
-      @keypress="startWorkout"
-      v-if="!workoutStarted"
-    >
-      Start
-    </span>
+  <main class="flex-grow-1 d-flex flex-column justify-center align-center">
+    <div class="text-center">
+      <span
+        v-if="!workoutStarted"
+        class="start-button btn btn-primary"
+        @click="startWorkout"
+        @keypress="startWorkout"
+      >
+        Start
+      </span>
 
-    <div v-else>
-      <h3 class="text-96">{{ counter }}</h3>
+      <div v-else>
+        <h3 class="text-96">{{ counter }}</h3>
+      </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
