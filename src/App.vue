@@ -7,11 +7,7 @@
     </div>
 
     <main class="flex-grow-1 d-flex flex-column justify-center align-center">
-      <div class="text-center">
-        <span class="start-button btn btn-primary">
-          Start
-        </span>
-      </div>
+      <Main />
     </main>
 
     <div class="footer d-flex justify-center">
@@ -24,8 +20,13 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import Main from './components/Main.vue'
+
 export default Vue.extend({
   name: 'App',
+  components: {
+    Main,
+  },
   created() {
     document.title = 'Spartacus Workout | Counter'
   },
